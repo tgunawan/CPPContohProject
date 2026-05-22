@@ -73,3 +73,6 @@ bisa panggil dari file lain tapi perlu
 - main.cpp (main file) > panggil header
 
 i/o,variable,operator, control(conditional - looping),function,list / array,string manipulation, nested loop,pointer(basic), OOP 
+
+## Overloading
+buat sebuah fungsi dengan nama yang sama namun berbeda parameter

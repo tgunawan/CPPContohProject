@@ -21,6 +21,7 @@ using namespace std;
 // }
 
 void tambahGaji(int &gaji) {
+    //jika pakai &di parameter maka sama seperti pakai variable global di python
     cout << "Gaji sebelum ditambah: " << gaji << endl;
     gaji += 200; // Menambahkan tambahan ke gaji
 }
