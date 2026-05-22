@@ -60,8 +60,13 @@ parameter bisa di set sebagai default
 void tambah (int a, float b){
 
 return a*b} 
+
+## Overloading
+buat sebuah fungsi dengan nama yang sama namun berbeda parameter
+
 ## scope dari variable
 
+### reference parameter
 void tambahGaji(int &gaji) { // & berfungsi untuk dapat mengubah variable di luar fungsi / variable global
     cout << "Gaji sebelum ditambah: " << gaji << endl;
     gaji += 200; // Menambahkan tambahan ke gaji
@@ -74,5 +79,13 @@ bisa panggil dari file lain tapi perlu
 
 i/o,variable,operator, control(conditional - looping),function,list / array,string manipulation, nested loop,pointer(basic), OOP 
 
-## Overloading
-buat sebuah fungsi dengan nama yang sama namun berbeda parameter
+### local variable
+hanya bisa di pakai dalam 1 lingkup fungsi itu sendiri
+
+### Global variable
+bisa di pakai di semua fungsi
+
+### block scope
+hanya berlaku / bisa di panggil dalam {}
+
+
