@@ -25,6 +25,20 @@ return 0 => Program selesai
 - Perbandingan
     ==,!=, >=, 
 
+## reference Variable dari memori langsung
+int HealthPoint = 100;
+
+    int& HP=HealthPoint;
+    HealthPoint-=10;
+    cout<<HealthPoint<<endl;
+    HP-=20;
+    cout<<HP<<endl;
+
+    // & ambil alamat memori, * dereference memori
+   cout<< &HP<<endl;
+   cout<< &HealthPoint;
+
+
 # Materi 3
 ## input
 cin>>nama;
@@ -47,7 +61,7 @@ switch(para){
 # Materi 5 Looping
 for( int i;i<5;i++)
 
-# function
+# Materi 6 function
 void halo(){
 
 } // fungsi yang di jalankan tanpa return / mengembalikan nilai
@@ -88,4 +102,19 @@ bisa di pakai di semua fungsi
 ### block scope
 hanya berlaku / bisa di panggil dalam {}
 
+# Built in string 
+# Materi 7 Array 1D 
+# Materi 8 Object-Oriented Programming (Class, Object, Encapsulation, Inheritance, Polymorphism, Abstraction)
+- class = klasifikasi - template object / blueprint object
+- Object = instance - bentuk asli hasil dari class -> sebuah variable yang menyimpan / di definisikan sebagai class tertentu ( adam=manusia("Adam") )
+Kenapa perlu OOP / perlu objek
+fungsi => menyimpan perintah dan data sementara / global tidak bisa membuat data aman
+object => membuat data lebih aman dan mudah untuk program menjadi modular dan mudah untuk di debug / di kembangkan lagi
 
+4 pilar utama OOP :
+- Encapsulation = untuk membuat data menjadi lebih aman (private,protected / public)
+- Inheritance = Parent - child => untuk mendapatkan method dari parent
+- Polymorphism = sebuah fungsi yang bisa di pakai untuk memanggil method yang berbeda
+- Abstraction = template yang harus ada di class bawah nya..(kendaraan -> bergerak )
+
+# Materi 9 

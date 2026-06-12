@@ -2,21 +2,35 @@
 #include<random>
 using namespace std;
 
-int random(){
+int random(int min, int max){
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<> distr(1,100);
+    uniform_int_distribution<> distr(min, max);
     return distr(gen);
 }
 
 int main(){
     
-    cout<< "Angka acak modern: "<<random<<endl; 
-    cout<<"\033[2J\033[H"; //\033[2J adalah untuk clear layar, \033[H untuk kursore kembali ke awal
-    cout<< "Angka acak modern: "<<random<<endl; 
-    cout<< "Angka acak modern: "<<random<<endl; 
-    cout<< "Angka acak modern: "<<random<<endl; 
-    cout<< "Angka acak modern: "<<random<<endl; 
+    cout<< "Angka acak modern: "<<random(1, 100)<<endl; 
+    cout<< "Angka acak modern: "<<random(0,1)<<endl; 
+    cout<< "Angka acak modern: "<<random(1, 10)<<endl; 
+    cout<< "Angka acak modern: "<<random(10, 20)<<endl; 
+    cout<< "Angka acak modern: "<<random(100, 200)<<endl; 
     
-    return 0;
+    int opportunity = random(1, 100);
+    if (opportunity > 50){
+        cout<<"Anda bertemu moster biasa!"<<endl;
+    } else if (opportunity >80){
+        cout<<"Anda bertemu moster mini boss!"<<endl;
+    }
+    else{
+        cout<<"Anda berjalan dengan aman, tidak ada monster yang muncul!"<<endl;
+    }
+  
+
+    int tesacak = random(1, 100);
+    cout << "Tes acak: " << tesacak << endl;
+    tesacak = random(1, 100);
+    cout << "Tes acak: " << tesacak << endl;
+      return 0;
 }
