@@ -134,4 +134,14 @@ object => membuat data lebih aman dan mudah untuk program menjadi modular dan mu
     - std::unique_ptr = eksklusif hanya boleh ada 1 pointer yang pegang alamat memori, jadi tidak bisa di copy hanya bisa di move
     - std::shared_ptr = pointer bisa di bagi, alamat memori dapat di pegang bersama-sama di beberapa pointer
 
-    
+# Materi 10 Struct & File Handling
+- struct = struktur kumpulan variable dengan tipe data yang berbeda di bungkus dalam 1 nama
+- class vs struct? = struct semua anggotanya public, class private
+- kapan pakai?? = jika ingin buat group atau untuk cloning data tanpa pakai inheritance / polymorph
+
+- Filehandling <fstream\>
+    - ofstream = output menulis data ke file
+    - ifstream = membaca data dari file
+    - fstream  = bisa pakai keduanya
+
+Next buat project dengan file handling => bisa save slot game

@@ -66,7 +66,7 @@ class Penyihir: public Karakter{
 int main(){
     cout<<"=== Simulasi RPG Game ==="<<endl;
     Penyihir player1("Gandalf",100,100); // buat object
-    // player1.darah=1000;
+    //player1.darah=1000;
 
     player1.terimaDamage(20);
 
