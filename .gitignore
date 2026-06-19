@@ -1,0 +1,30 @@
+# Ignore compiled binaries and object files
+*.exe
+*.out
+*.obj
+*.o
+*.a
+*.lib
+*.dll
+*.pdb
+*.ilk
+*.idb
+
+# Ignore build and output directories
+build/
+bin/
+Debug/
+Release/
+
+# Ignore editor settings and temporary files
+.vscode/
+*.user
+*.log
+*.tmp
+*.swp
+*~
+
+# Ignore OS-specific files
+Thumbs.db
+desktop.ini
+.DS_Store
