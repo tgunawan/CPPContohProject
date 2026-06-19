@@ -117,4 +117,5 @@ object => membuat data lebih aman dan mudah untuk program menjadi modular dan mu
 - Polymorphism = sebuah fungsi yang bisa di pakai untuk memanggil method yang berbeda
 - Abstraction = template yang harus ada di class bawah nya..(kendaraan -> bergerak )
 
-# Materi 9 
+# Materi 9  Dynamic memory & Smart Pointer
+
