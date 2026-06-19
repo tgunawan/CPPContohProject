@@ -119,3 +119,19 @@ object => membuat data lebih aman dan mudah untuk program menjadi modular dan mu
 
 # Materi 9  Dynamic memory & Smart Pointer
 
+- Memory stack:
+    - analogi : LiFo(Last in First Out) -> tumpukan piring setelah di cuci tumpukan paling atas yang di ambil pertama
+    - ukuran apps / program lebih kecil, alokasi memori otomatis dari komputer dan langsung di hapus begitu fungsi selesai (keluar dengan tanda '}')
+    - contoh yang ada di stack int x = 10;
+
+- Memory Heap(set manual memori):
+    - analogi : tempat parkir-> bebas mau parkir dimana saja tapi harus ingat mengeluarkan kendaraan.
+    - ukuran bisa sebesar sisa RAM, dengan heap yang tidak di hapus. pakai dengan 'new' dengan perlu 'delete'
+    - memori leak: buat banyak new tapi lupa delete-> hasilnya menumpuk dan memori habis lama-lama program crash
+
+- Gaya lama heap memory menggunakan new dan delete
+- gaya baru heap memory 
+    - std::unique_ptr = eksklusif hanya boleh ada 1 pointer yang pegang alamat memori, jadi tidak bisa di copy hanya bisa di move
+    - std::shared_ptr = pointer bisa di bagi, alamat memori dapat di pegang bersama-sama di beberapa pointer
+
+    
