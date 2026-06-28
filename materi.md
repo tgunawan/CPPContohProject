@@ -145,3 +145,12 @@ object => membuat data lebih aman dan mudah untuk program menjadi modular dan mu
     - fstream  = bisa pakai keduanya
 
 Next buat project dengan file handling => bisa save slot game
+ - OOP / Class untuk player = Parent Hero -> child vilager (default), swordman , archer, priest
+ - struct = 
+ - fstream = untuk saving game pertama mulai buat karakter otomatis save data, kalau ga buat load game char
+
+ mulai program ada pilihan new game / load game
+ - kalau new game buat char dengan input nama langsung masuk class vilager (default), masuk ke tavern bicara dengan bartender untuk change class menjadi (ada pilihan swordman,archer, priest)
+ - kalau load game buka file dengan menu pilihan 2 file 
+ - saat mulai ada pilihan menu lokasi yang di tuju (tavern (untuk ganti class dengan coin), cave (setiap ke cave menambah coin), home(bisa save dan load) )
+gak bisa kak 
