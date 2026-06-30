@@ -5,7 +5,7 @@ using namespace std;
 int random(int min, int max){
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<> distr(min, max);
+    uniform_int_distribution<> distr(min, max);//Jika kamu ingin menghasilkan angka desimal pecahan (float/double), kamu tinggal mengganti std::uniform_int_distribution menjadi std::uniform_real_distribution.
     return distr(gen);
 }
 
