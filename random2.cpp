@@ -5,7 +5,7 @@
 using namespace std;
 
 int main()
-{
+{/*
     srand(time(0));   
  
     int glorgoskuss = 0;
@@ -85,5 +85,5 @@ int main()
 
      
     cout <<"--. --- / .... --- -- . / .- -. -.. / -.. --- -. - / -.-. --- -- . / -... .- -.-. -.- / ..-. --- .-. / .... . / .. ... / .- -... --- ..- - / - --- / -... ..- .-. -. / - .... .. ... / .--. .-.. .- -.-. . / .... ..- -- .- -. .-.-.- got"<< glorgoskuss <<" correct!! WOWIE YOU ARE GOODETH IN MATH"<< endl;
-        
+     */   
  }
