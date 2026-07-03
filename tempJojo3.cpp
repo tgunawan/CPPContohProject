@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <random>
 
 using namespace std;
 
@@ -138,10 +139,15 @@ Hero* LoadGame(string filename);
 void WorldMenu(Hero*& player);
 
 void Tavern(Hero*& player);
-void Cave(Hero*& player);
+//void Cave(Hero*& player);
 void Home(Hero*& player);
 
-
+int random(int min, int max){
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<> distr(min, max);
+    return distr(gen);
+};
 Hero* CreateCharacter(){
     string name;
     cout << "Enter your character's name: ";
@@ -155,7 +161,62 @@ Hero* CreateCharacter(){
     SaveGame(player, "save1.txt"); // Save the game after character creation
     return player;
 }
+void displayCaveMenu(){
+        cout<<"You see two paths in front of you."<<endl;
+        cout <<"Would you like to go left or right?"<<endl;
+        cout<<"1. Left"<<endl;
+        cout<<"2. Right"<<endl;
+        cout<<"Enter the number of your choice: ";
+}
+void Cave(Hero* player){
+    int i=0;
+    cout <<"You wake up in a Cave oF Unknown oRigin"<<endl;
+    do{
+        displayCaveMenu();
+        int direction;
+        cin>>direction;
+        if (direction==1){
+            cout<<"You decided to go Left."<<endl;
+        }
+        else if (direction==2){
+            cout<<"You decided to go Right."<<endl;
+            direction=1;
+        }
+        else {
+            cout<<"Invalid choice!"<<endl;
+            continue;
+        }
+            
+            int opportunity = random(1, 100);
+            cout<<"Your opportunity number is "<<opportunity<<endl;
+            if (opportunity > 50){
+                // cout<<"You encounter a monster!"<<endl;
+                cout<<"What will you do?"<<endl;
+                cout<<"1. Fight"<<endl;
+                cout<<"2. Run"<<endl;
+                cout<<"Enter the number of your choice: ";
+                int action;
+                cin>>action;
+                if (action==1){
+                    cout<<"You just won dont ask me how"<<endl;
+                    break;
+                    
+                    }
+                else {
+                    continue;
+                }
+            }
+            else if (opportunity >80){
+                cout<<"You walked safely !"<<endl;
 
+            }
+            else{
+                cout<<"You Found The Exit!"<<endl;
+                i++;
+            }
+    }
+    while (i==0);
+}
 void WorldMenu(Hero*& player) {
     if (player == nullptr) {
         return;
@@ -179,7 +240,7 @@ void WorldMenu(Hero*& player) {
                 cout << "Tavern belum diimplementasikan." << endl;
                 break;
             case 2:
-                cout << "Cave belum diimplementasikan." << endl;
+                Cave(player);
                 break;
             case 3:
                 cout << "Home belum diimplementasikan." << endl;
@@ -239,69 +300,20 @@ Hero* LoadGame(string filename){
     else {
         player = new Villager();
         cout << "Unknown job type in save file." << endl;
+
     }
+
     player->SetName(data.name);
     player->SetCoin(data.coin);
     return player;
 };
-void Tavern(Hero*& player){
-    int pilih;
-    while (true){
-        cout << "=== Tavern ===" << endl;
-        cout << "Coin: " << player->GetCoin() << endl;
-        cout << "Job: " << player->GetJob() << endl;
-
-        cout << "1. Swordman (10 Coin)" << endl;
-        cout << "2. Archer (10 Coin)" << endl;
-        cout << "3. Priest (10 Coin)" << endl;
-        cout << "4. Keluar" << endl;
-        cout << "Pilih: ";
-        cin >> pilih;
-
-        if (pilih == 4) {
-            break; // Exit the tavern
-        }
-
-        if (player->GetCoin() < 10) {
-            cout << "Not enough coin to change job." << endl;
-            continue;
-        }
-
-        Hero* temp = nullptr;
-        switch (pilih) {
-            case 1:
-                temp = new Swordman();
-                break;
-            case 2:
-                temp = new Archer();
-                break;
-            case 3:
-                temp = new Priest();
-                break;
-            default:
-                cout << "Invalid choice. Please try again." << endl;
-                continue;
-        }
-        temp->SetName(player->GetName());
-        temp->SetCoin(player->GetCoin() - 10); // dari fee change class
-        delete player; // Delete the old player object
-        player = temp;
-        cout << "Player Successfully changed to " << player->GetJob() << "!" << endl;
-    }
-};
 
 
-void Cave(Hero*& player){
-    cout << "=== Cave ===" << endl;
-    cout << "You Eksplore the cave..." << endl;
-    cout << "You've found coins (10 coin)" << endl;
-    player->Coinadd(10);
-    cout << "Coin: " << player->GetCoin() << endl;
-};
 
-// void Home(Hero*& player);
 
 // Main function
+
+
 int main() {
     Hero* player = nullptr;// Pointer untuk menyimpan data player
     
@@ -325,7 +337,12 @@ int main() {
                 WorldMenu(player);
                 break;
             case 2:
-
+                if (player != nullptr) {
+                    delete player;
+                    player = nullptr;
+                }
+                player = LoadGame("save1.txt");
+                WorldMenu(player);
                 break;
             case 3:
                 cout << "Exiting the game." << endl;
@@ -351,4 +368,3 @@ int main() {
 
 
 
-//67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67
