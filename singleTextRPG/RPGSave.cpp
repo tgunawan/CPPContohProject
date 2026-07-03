@@ -78,6 +78,11 @@ class Hero{
 
 };
 
+
+//==============
+// child Class
+//==============
+
 class Villager : public Hero{
     public:
         Villager(){
@@ -128,13 +133,14 @@ class Priest : public Hero{
 
 // Prototype function
 // Hero* CreateCharacter();
-void SaveGame(Hero* player, string filename);
-Hero* LoadGame(string filename);
+//void SaveGame(Hero* player, string filename);
+//Hero* LoadGame(string filename);
+//void WorldMenu(Hero*& player);
 
 void Tavern(Hero*& player);
 void Cave(Hero*& player);
 void Home(Hero*& player);
-void WorldMenu(Hero*& player);
+
 
 Hero* CreateCharacter(){
     string name;
@@ -146,6 +152,7 @@ Hero* CreateCharacter(){
     cout << "Character created successfully!" << endl;
     cout << "Class: " << player->GetJob() << endl;
 
+    SaveGame(player, "save1.txt"); // Save the game after character creation
     return player;
 }
 
@@ -185,6 +192,60 @@ void WorldMenu(Hero*& player) {
     } while (true);
 }
 
+void SaveGame(Hero* player, string filename){
+    ofstream file(filename);
+    if (!file){
+        cout << "Failed to open file / File Corupt." << endl;
+        return;
+    }
+    file << player->GetName() << endl;
+    file << player->GetJob() << endl;
+    file << player->GetHP() << endl;
+    file << player->GetAttack() << endl;
+    file << player->GetCoin() << endl;
+    file.close();
+    
+    cout << "Game saved successfully to " << filename << endl;
+};
+
+Hero* LoadGame(string filename){
+    SaveData data;
+    ifstream file(filename);
+    if (!file){
+        cout << "Failed to open file / File Corupt." << endl;
+        return nullptr;
+    }
+
+    getline(file, data.name);
+    getline(file, data.job);
+    file >> data.hp;
+    file >> data.attack;
+    file >> data.coin;
+    file.close();
+
+    Hero* player;
+    if (data.job == "Villager") {
+        player = new Villager();
+    }
+    else if (data.job == "Swordman") {
+        player = new Swordman();
+    }
+    else if (data.job == "Archer") {
+        player = new Archer();
+    }
+    else if (data.job == "Priest") {
+        player = new Priest();
+    }
+    else {
+        player = new Villager();
+        cout << "Unknown job type in save file." << endl;
+
+    }
+
+    player->SetName(data.name);
+    player->SetCoin(data.coin);
+    return player;
+};
 
 // Main function
 int main() {
