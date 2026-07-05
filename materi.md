@@ -154,5 +154,6 @@ Next buat project dengan file handling => bisa save slot game
  - kalau load game buka file dengan menu pilihan 2 file 
  - saat mulai ada pilihan menu lokasi yang di tuju (tavern (untuk ganti class dengan coin), cave (setiap ke cave menambah coin), home(bisa save dan load) )
 
+
 # Materi 11  Templates dan Exception Handling
 
