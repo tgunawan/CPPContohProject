@@ -1,3 +1,4 @@
+/* contoh
 #include <algorithm>
 #include <exception>
 #include <iostream>
@@ -20,7 +21,7 @@ using namespace std;
 
   Tujuan: membuat satu file `main.cpp` yang mudah dibaca pemula,
   lengkap dengan komentar penjelasan setiap bagian.
-*/
+
 
 // ==============================================
 // Part 1: Function Template
@@ -455,3 +456,4 @@ int main() {
 
     return 0;
 }
+*/

@@ -157,3 +157,16 @@ Next buat project dengan file handling => bisa save slot game
 
 # Materi 11  Templates dan Exception Handling
 
+## Template 
+template = cetakan apapun yang di masukkan akan menghasilkan bentuk sesuai dengan cetakan yang disiapkan
+
+kalau tanpa template maka akan perlu banyak funnction overloading
+tambah(int n), tambah(float n)
+
+</typename T/> tanpa /
+
+## Exception Handling (Try - catch)
+Exception = code dengan kemungkinan error di taruh di try dimana jika ada error maka akan di tangkap oleh catch
+
+
+template&except example retype continue
