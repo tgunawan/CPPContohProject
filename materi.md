@@ -169,4 +169,27 @@ tambah(int n), tambah(float n)
 Exception = code dengan kemungkinan error di taruh di try dimana jika ada error maka akan di tangkap oleh catch
 
 
-template&except example retype continue
+# Materi 12 Standard Template Library (STL) Deepdive (Container, Vector,Map,Set; iterator & algorithm)
+
+## STL berdiri di atas 3 pilar utama:
+- Container(wadah): tempat menyimpan data. Beda wadah berarti beda cara penyusunan data di RAM
+
+- Iterators(Penunjuk / Navigator): objek yang berfungsi sebagai pointer / cursor untuk melewati elemen dalam kontainer
+
+- algorithm(Pengolah): fungsi bawaan yang tinggal di pakai
+
+## 3 container utama: 
+- vector(Array Dinamis): 
+    - analogi : kereta lego yang bisa di tambahkan gerbong baru kapan saja
+    - karakter : datanya berurutan di memori, ambil data (data[1])
+
+- map(dictionary / Key-value): 
+    - analogi: buku telepon -> cari nama untuk dapat no telepon
+    - karakter : tiap Key harus unik dan otomatis terurut
+
+- set(Himpunan unik):
+    - analogi: kumpulan sidik jari untuk absen, tidak boleh ada dua data yang sama
+    - karaketer : kalau masukkan angka 5 sebanyak 3 kali, set ini akan hanya simpan 1 angka 5. Semua data otomatis berurutan
+
+
+baru masuk vector, next map
