@@ -16,7 +16,7 @@ int main(){
     daftarGame.push_back("Cypherpunk 2077");
 
     //algorithm STL Sort
-    sort(daftarGame.begin(), daftarGame.end()); // Mengurutkan daftar game secara alfabet
+    std::sort(daftarGame.begin(), daftarGame.end()); // Mengurutkan daftar game secara alfabet
 
     // Menampilkan daftar game setelah diurutkan
     std::cout<<"Daftar Game setelah diurutkan:"<<std::endl;
