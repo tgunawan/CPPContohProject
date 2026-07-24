@@ -34,7 +34,9 @@ int main(){
     for (std::vector<std::string>::iterator it = daftarGame.begin(); it != daftarGame.end(); ++it){
         std::cout<<"- "<<*it<<std::endl;
     }
-
+    int angka;
+    std::cout<<"input character untuk keluar";
+    std::cin>>angka;
     
 
     

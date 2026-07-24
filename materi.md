@@ -192,4 +192,5 @@ Exception = code dengan kemungkinan error di taruh di try dimana jika ada error 
     - karaketer : kalau masukkan angka 5 sebanyak 3 kali, set ini akan hanya simpan 1 angka 5. Semua data otomatis berurutan
 
 
-baru masuk vector, next map
+next hapus dan edit di tes lanjut map dan set (polemon dan pokedex)
+
