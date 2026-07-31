@@ -34,6 +34,17 @@ int main(){
     for (std::vector<std::string>::iterator it = daftarGame.begin(); it != daftarGame.end(); ++it){
         std::cout<<"- "<<*it<<std::endl;
     }
+
+
+    //algorithm untuk cari barang
+    std::string target = "GTA xXx";
+    auto hasilCari = std::find(daftarGame.begin(), daftarGame.end(), target);
+    if (hasilCari != daftarGame.end()){
+        std::cout << "Pencarian ditemukan";
+    }
+    else{
+        std::cout << "Jojo Nangis";
+    }
     int angka;
     std::cout<<"input character untuk keluar";
     std::cin>>angka;
