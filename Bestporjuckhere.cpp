@@ -8,7 +8,7 @@ string username(string a){
     return a;
 }
 void clear(){
-    cout<<"\033[2J\033[H";
+    cout<<"\033[2J\033[H"; 
 }
 void wait(){
     cout << "Press Enter to continue...";
