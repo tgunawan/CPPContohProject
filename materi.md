@@ -192,5 +192,9 @@ Exception = code dengan kemungkinan error di taruh di try dimana jika ada error 
     - karaketer : kalau masukkan angka 5 sebanyak 3 kali, set ini akan hanya simpan 1 angka 5. Semua data otomatis berurutan
 
 
-next hapus dan edit di tes lanjut map dan set (polemon dan pokedex)
+# Materi 13 Modern C++ Feature (auto, Range-based loops, nullptr,Lambda Expressions)
+- auto : tipe data yang otomatis => deteksi tipe data dari nilai awal 
+- ranged based for loop : for (int i=0;i<n;i++>)
+- nullptr : NULL di C++ lama hanya 0 tapi di beri nama NULL. ini di buat agar lebih type safe program jadi bisa bedakan mana 0 mana kosong
+- lambda : fungsi sekali pakai. contoh : [capture](parameter) -> return_type { body } 
 
