@@ -200,4 +200,28 @@ Exception = code dengan kemungkinan error di taruh di try dimana jika ada error 
 
 next lanjutkan modern CPP project belum selesai
 
-# MAteri 14 Concurency (Multithreading  & Async)
+# Materi 14 Concurency (Multithreading  & Async)
+- Concurency || Multithreading : menjalankan beberapa proses secara bersama dan menyelesaikan masalah waktu
+
+## multi threading
+Mencoba membuat sebuah program menjadi berjalan dalam beberapa thread (std::thread) handle konflik akses data (race condition & mutex[mutual exclusion] ) , dan penggunaan async (std::async dan std::future) untuk ambilhasil perhitungan dari background process
+
+- versi lama = single thread 
+- C++ int main() => main thread, bisa buat thread baru dengan library <thread>
+
+## race condition dan mutex
+- race condition = kondisi dimana program berjalan bersamaan (membaca / edit data)
+- mutex = feature untuk membuat antrian (mutex.lock() || mutex.unlock())
+- std::lock_guard() = assisten otomatis untuk buka dan kunci mutex  RAII, hingga tidak pusing pakai unlock()
+
+## Async excecution
+- async dan future 
+- biasa di pakai kalau program cukup besar fungsi yang di panggil memerlukan load yang berat / lama, jadi fungsi tersebut di oper ke background processing. hingga thread utama tidak terganggu
+
+
+## next buat project multi tasking
+
+
+
+
+
