@@ -198,3 +198,6 @@ Exception = code dengan kemungkinan error di taruh di try dimana jika ada error 
 - nullptr : NULL di C++ lama hanya 0 tapi di beri nama NULL. ini di buat agar lebih type safe program jadi bisa bedakan mana 0 mana kosong
 - lambda : fungsi sekali pakai. contoh : [capture](parameter) -> return_type { body } 
 
+next lanjutkan modern CPP project belum selesai
+
+# MAteri 14 Concurency (Multithreading  & Async)
