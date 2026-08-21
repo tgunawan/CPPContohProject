@@ -219,7 +219,7 @@ Mencoba membuat sebuah program menjadi berjalan dalam beberapa thread (std::thre
 - biasa di pakai kalau program cukup besar fungsi yang di panggil memerlukan load yang berat / lama, jadi fungsi tersebut di oper ke background processing. hingga thread utama tidak terganggu
 
 
-## next buat project multi tasking
+## next buat project multi tasking // lanjukan temp jojo
 
 
 

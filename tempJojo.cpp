@@ -9,20 +9,21 @@
 #include<chrono>
 #include<thread>
 #include<mutex>
+#include <future>
 
 using namespace std;
-
+mutex mx;
 struct pabric{
     int cash;
     int gold;
     float Market_Price;
 };
 
-int methgen(pabric,int A){
-    while(true){
+int methgen(pabric p,int A){
+        lock_guard<mutex> lock(mx);
             this_thread::sleep_for(chrono::seconds(A));
-            gold = gold + 1;
-    }
+            p.gold = p.gold + 1;
+            cout<<"You have made 1 gold"<<endl;
 }
 
 int main(){
@@ -34,6 +35,10 @@ int main(){
     cin>>name;
     cout<<"Oh WOW DR "<<name<<" What a nice name"<<endl;
     cout<<"Now lets get started with your new acc"<<endl;
-    thread meth(methgen, pabric, 5);
+    
+    pabric Lab;
+    Lab.cash = 0;
+    thread meth(methgen,Lab,5);
+    thread meth2(methgen,Lab,12);
     return 0;
 }
