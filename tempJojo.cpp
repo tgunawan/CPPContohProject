@@ -19,11 +19,12 @@ struct pabric{
     float Market_Price;
 };
 
-int methgen(pabric p,int A){
+int methgen(pabric& lab,int A){
         lock_guard<mutex> lock(mx);
-            this_thread::sleep_for(chrono::seconds(A));
-            p.gold = p.gold + 1;
-            cout<<"You have made 1 gold"<<endl;
+        this_thread::sleep_for(chrono::seconds(A));
+        lab.gold = lab.gold + 1;
+        cout<<"You have made 1 gold"<<endl;
+        return lab.gold;
 }
 
 int main(){
@@ -36,9 +37,9 @@ int main(){
     cout<<"Oh WOW DR "<<name<<" What a nice name"<<endl;
     cout<<"Now lets get started with your new acc"<<endl;
     
-    pabric Lab;
-    Lab.cash = 0;
-    thread meth(methgen,Lab,5);
-    thread meth2(methgen,Lab,12);
+    pabric lab;
+    lab.cash = 0;
+    thread meth(methgen,ref(lab),5);
+    // thread meth2(methgen,Lab,12);
     return 0;
 }
