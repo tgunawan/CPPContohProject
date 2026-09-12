@@ -219,9 +219,42 @@ Mencoba membuat sebuah program menjadi berjalan dalam beberapa thread (std::thre
 - biasa di pakai kalau program cukup besar fungsi yang di panggil memerlukan load yang berat / lama, jadi fungsi tersebut di oper ke background processing. hingga thread utama tidak terganggu
 
 
-## next buat project multi tasking // lanjukan temp jojo
+# Advance Enginering
+- CMake
+- GDB / MSCV debuger
 
+## CMake
+- Problem kompilasi manual => kalau Jojo punya 50 file cpp. pakai 5 library dan di jalankan windows,linux, macos, jadi akan mempermudah proses compile program
+- anggap saja seperti Manajer pembangunan yang siapkan blueprint
+- keuntungan:
+    - Cross platform = CMakeList.txt
+    - automatisasi dependency = masuk ke pemakaian modul menghubungkan file header ".h"
 
+## GDB / MSCV Debugger
+- cout<<"Test"; ini makin lama akan tidak cukup
+
+- break point = titik merah penanda baris kode yang akan di hentikan sementara
+- step over (f10) = jalankan 1 baris kode di depannya tanpa masuk ke fungsi
+- stpe into (f11) = masuk ke fungsi untuk lihat isi fungsi
+- step out (shift + f11) = selesai cek fungsi keluar ke main program tempat panggil fungsi
+- call stack = map pemanggilan fungsi jadi terlihat fungsi mana yang memanggil fungsi berbeda sampai terdetect error / crash
+- watch window = panel untuk cek nilai variable realtime
+
+## next kita akan implementasi module programming
+
+fungsi.h = Header => Declare function
+
+fungsi.cpp = Implementasi fungsi
+
+main.cpp = awal masuk program
+
+Project :
+- CMakeList.txt
+- include/
+    - Kalkulator.h
+- src/
+    - Kalkulator.cpp
+    - main.cpp
 
 
 
