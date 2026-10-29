@@ -1,0 +1,3 @@
+Ini adalah file contoh untuk belajar error handling.
+Kalau file ini ada, program akan berhasil membaca isinya.
+Jika file tidak ada, program akan menangkap error runtime_error.

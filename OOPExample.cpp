@@ -1,7 +1,3 @@
-// RPG
-// Karakter Utama -> Karakter -> Penyihir
-// main program
-
 #include<iostream>
 #include<string>
 using namespace std;
@@ -77,5 +73,4 @@ int main(){
     return 0;
 }
 
-// Next buat text based RPG
-// karakter : Wizard, Swordman, Archer, Assassin, KIng 
+
