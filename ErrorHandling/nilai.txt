@@ -1,0 +1,2 @@
+tester1 80
+tester2 90
